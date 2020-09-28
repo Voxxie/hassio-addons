@@ -7,6 +7,8 @@ CUSTOM_CFG_PATH=/share/zabbix-agent
 SERVER=$(jq --raw-output ".server" $CONFIG_PATH)
 HOSTNAME=$(jq --raw-output ".hostname" $CONFIG_PATH)
 
+echo $PSK
+
 echo "
 Server=$SERVER
 ServerActive=$SERVER
@@ -19,7 +21,9 @@ LogType=console
 " > /etc/zabbix/zabbix_agentd.conf
 
 
-echo "$PSK" > /etc/zabbix/zabbix_agentd.psk
+echo "
+$PSK
+" > /etc/zabbix/zabbix_agentd.psk
 
 
 

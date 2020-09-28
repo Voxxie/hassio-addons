@@ -7,10 +7,6 @@ CUSTOM_CFG_PATH=/share/zabbix-agent
 SERVER=$(jq --raw-output ".server" $CONFIG_PATH)
 HOSTNAME=$(jq --raw-output ".hostname" $CONFIG_PATH)
 
-if [ ! -d "$CUSTOM_CFG_PATH" ] ; then
-  mkdir -p "$CUSTOM_CFG_PATH"
-fi
-
 echo "
 Server=$SERVER
 ServerActive=$SERVER
@@ -20,15 +16,12 @@ TLSAccept=psk
 TLSPSKIdentity=$HOSTNAME
 TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
 LogType=console
-Include=${CUSTOM_CFG_PATH}/*.conf
 " > /etc/zabbix/zabbix_agentd.conf
 
 
 echo "
 $PSK
 " > /etc/zabbix/zabbix_agentd.psk
-
-
 
 
 

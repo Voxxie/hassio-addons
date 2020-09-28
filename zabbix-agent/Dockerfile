@@ -9,6 +9,6 @@ COPY run.sh /
 RUN apk add -U jq zabbix-agent sudo && \
   chmod a+x /run.sh
 RUN chmod u+s /bin/ping
-RUN chmod u+s /bin/traceroute
+RUN chmod u+s /sbin/traceroute
 
 CMD [ "/run.sh" ]

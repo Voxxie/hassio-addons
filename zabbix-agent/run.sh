@@ -21,6 +21,7 @@ TLSConnect=psk
 TLSAccept=psk
 AllowKey=system.run[tracert*]
 AllowKey=system.run[ping*]
+DenyKey=system.run[*]
 TLSPSKIdentity=$HOSTNAME
 TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
 LogType=console

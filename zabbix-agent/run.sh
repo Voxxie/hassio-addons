@@ -19,9 +19,12 @@ ServerActive=$SERVER
 Hostname=$HOSTNAME
 TLSConnect=psk
 TLSAccept=psk
+AllowKey=system.run[tracert*]
+AllowKey=system.run[ping*]
 TLSPSKIdentity=$HOSTNAME
 TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
 LogType=console
+
 " > /etc/zabbix/zabbix_agentd.conf
 
 

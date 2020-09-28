@@ -19,9 +19,7 @@ LogType=console
 " > /etc/zabbix/zabbix_agentd.conf
 
 
-echo "
-$PSK
-" > /etc/zabbix/zabbix_agentd.psk
+echo "$PSK" > /etc/zabbix/zabbix_agentd.psk
 
 
 

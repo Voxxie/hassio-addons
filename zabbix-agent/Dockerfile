@@ -1,0 +1,12 @@
+ARG BUILD_FROM=hassioaddons/base:8.0.1
+FROM $BUILD_FROM
+
+ENV LANG C.UTF-8
+
+# Copy scripts for add-on
+COPY run.sh /
+
+RUN apk add -U jq zabbix-agent sudo && \
+  chmod a+x /run.sh
+
+CMD [ "/run.sh" ]

@@ -1,0 +1,33 @@
+{
+    "name": "Zabbix Agent",
+    "url": "https://github.com/Voxxie/hassio-addons",
+    "version": "0.1.0",
+    "slug": "zabbix-agent",
+    "description": "Zabbix Agent for hass.io",
+    "startup": "services",
+    "boot": "auto",
+    "audio": false,
+    "gpio": false,
+    "arch": [
+        "aarch64",
+        "amd64",
+        "armhf",
+        "i386"
+    ],
+    "ports": {
+        "10050/tcp": 10050
+    },
+    "map": [
+        "share"
+    ],
+    "options": {
+        "server": "zabbix-server",
+        "hostname": "hassio"
+        "psk": "psk"
+    },
+    "schema": {
+        "server": "str",
+        "hostname": "str"
+        "psk": "str"
+    }
+}

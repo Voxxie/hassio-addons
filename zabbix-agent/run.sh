@@ -7,7 +7,7 @@ CUSTOM_CFG_PATH=/share/zabbix-agent
 SERVER=$(jq --raw-output ".server" $CONFIG_PATH)
 HOSTNAME=$(jq --raw-output ".hostname" $CONFIG_PATH)
 
-echo $PSK
+echo "DEPLOYING ZABBIX AGENT $PSK"
 
 echo "
 Server=$SERVER

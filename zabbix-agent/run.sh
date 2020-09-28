@@ -20,6 +20,7 @@ Hostname=$HOSTNAME
 TLSConnect=psk
 TLSAccept=psk
 EnableRemoteCommands=1
+Timeout=30
 TLSPSKIdentity=$HOSTNAME
 TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
 LogType=console

@@ -6,9 +6,9 @@ ENV LANG C.UTF-8
 # Copy scripts for add-on
 COPY run.sh /
 
-RUN apk add -U jq zabbix-agent sudo && \
-  chmod a+x /run.sh && \
-  chmod u+s /bin/ping && \
-  chmod u+s /bin/traceroute
+RUN apk add -U jq zabbix-agent && sudo chmod a+x /run.sh
+
+RUN sudo chmod u+s /bin/ping
+RUN sudo chmod u+s /bin/traceroute
 
 CMD [ "/run.sh" ]

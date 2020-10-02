@@ -8,10 +8,6 @@ SERVER=$(jq --raw-output ".server" $CONFIG_PATH)
 HOSTNAME=$(jq --raw-output ".hostname" $CONFIG_PATH)
 PSK=$(jq --raw-output ".psk" $CONFIG_PATH)
 
-echo "------------DEPLOYING ZABBIX AGENT-----------"
-echo "HOSTNAME: $HOSTNAME"
-echo "PSK: $PSK"
-echo "------------DEPLOYING ZABBIX AGENT-----------"
 
 echo "
 Server=$SERVER

@@ -1,7 +1,7 @@
 {
     "name": "Zabbix Agent",
     "url": "https://github.com/Voxxie/hassio-addons",
-    "version": "0.1.21",
+    "version": "0.1.22",
     "slug": "zabbix-agent",
     "description": "Zabbix Agent for hass.io",
     "startup": "services",
